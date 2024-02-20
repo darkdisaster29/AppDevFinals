@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Development Quiz</title>
+
+    <!-- Add Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- Add Custom CSS -->
+    <link rel="stylesheet" href="Custom.css">
+
+    <!-- Add Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- Add JavaScript for quizzes -->
+    <script src="ApplicationDevelopment.js"></script>
+</head>
+<body>
+
+<!-- Quiz 1 -->
+<div class="container">
+    <div class="jumbotron Content3C">
+        <h2>1. Which programming language is commonly used for Android app development?</h2>
+        <h3><button class="btn btn-info" onclick="checkAnswer(1, 'a')">a.) Java</button></h3>
+        <h3><button class="btn btn-info" onclick="checkAnswer(1, 'b')">b.) Python</button></h3>
+        <h3><button class="btn btn-info" onclick="checkAnswer(1, 'c')">c.) C#</button></h3>
+        <h3><button class="btn btn-info" onclick="checkAnswer(1, 'd')">d.) Swift</button></h3>
+    </div>
+</div>
+
+<!-- Quiz 2 -->
+<div class="container">
+    <div class="jumbotron Content3C">
+        <h2>2. What is the purpose of version control systems like Git in application development?</h2>
+        <h3><button class="btn btn-info" onclick="checkAnswer(2, 'a')">a.) Managing project budgets</button></h3>
+        <h3><button class="btn btn-info" onclick="checkAnswer(2, 'b')">b.) Tracking changes to source code</button></h3>
+        <h3><button class="btn btn-info" onclick="checkAnswer(2, 'c')">c.) Creating user interfaces</button></h3>
+        <h3><button class="btn btn-info" onclick="checkAnswer(2, 'd')">d.) Testing software compatibility</button></h3>
+    </div>
+</div>
+
+<!-- Add more quizzes as needed -->
+
+<!-- Script to handle quizzes -->
+<script>
+    function checkAnswer(questionNumber, selectedOption) {
+        // Assuming correct answers are 'a' for all questions
+        var correctAnswer = 'a';
+        var selectedAnswer = selectedOption.toLowerCase();
+
+        if (selectedAnswer === correctAnswer) {
+            // Correct answer
+            alert("Question " + questionNumber + ": Correct!");
+        } else {
+            // Incorrect answer
+            alert("Question " + questionNumber + ": Incorrect!");
+        }
+    }
+</script>
+
+</body>
+</html>

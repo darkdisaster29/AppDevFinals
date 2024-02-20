@@ -1,0 +1,299 @@
+<?php
+  session_start();
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple HTML HomePage</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+    body {
+      margin: 0;
+      box-sizing: border-box;
+      height: 100vh;
+      width: 100vw;
+    }
+    main{
+      
+      overflow: hidden;
+    }
+
+	/* border: 1px solid red; */
+
+    /* CSS for header */
+    .header {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f5f5f5;
+    }
+
+    .header .logo {
+      font-size: 3em;
+      /* font-family: 'Poppins'; */
+      color: #000;
+      text-decoration: none;
+      margin-left: 30px;
+      text-align: center;
+    }
+
+    .nav-items {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #f5f5f5;
+      margin-right: 20px;
+    }
+
+    .nav-items a {
+      text-decoration: none;
+      color: #000;
+      padding: 35px 20px;
+    }
+
+    /* CSS for main element */
+    .intro {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      padding: 50px;
+      align-items: start;
+      width: 100%;
+      height: 100px;
+      background-color: #302f49;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .intro h1 {
+      font-family: sans-serif;
+      font-size: 30px;
+      color: #fff;
+      font-weight: medium;
+      
+      margin: 0;
+    }
+
+    .intro p {
+      font-family: sans-serif;
+      font-size: 40px;
+      color: white;
+      
+      font-weight: bold;
+      margin: 20px 0;
+    }
+
+    
+    .intro button {
+      background-color: #5edaf0;
+      color: #000;
+      padding: 10px 25px;
+      border: none;
+      border-radius: 5px;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4)
+    }
+
+    .achievements {
+      position: relative;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      padding: 40px 0px;
+      /* border: 1px solid black; */
+      width: 100%;
+    }
+
+    .achievements .work {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 40px;
+    }
+
+    .achievements .work i {
+      width: fit-content;
+      font-size: 50px;
+      color: black;
+      border-radius: 50%;
+      border: 2px solid black;
+      padding: 12px;
+    }
+
+
+    .achievements .work .work-heading {
+      font-size: 20px;
+      font-weight: bold;
+      color: black;
+      text-transform: uppercase;
+      margin: 10px 0;
+    }
+
+    .achievements .work .work-text {
+      font-size: 15px;
+      color: #585858;
+      margin: 10px 0;
+    }
+
+    .about-me {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 80px;
+      border-top: 2px solid #eeeeee;
+    }
+
+    .about-me img {
+      width: 500px;
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .about-me-text h2 {
+      font-size: 30px;
+      color: #333333;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    .about-me-text p {
+      font-size: 15px;
+      color: #585858;
+      margin: 10px 0;
+    }
+
+    /* CSS for footer */
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #302f49;
+      padding: 40px 80px;
+    }
+
+    .footer .copy {
+      color: #fff;
+    }
+
+    .bottom-links {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 40px 0;
+    }
+
+    .bottom-links .links {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 40px;
+    }
+
+    .bottom-links .links span {
+      font-size: 20px;
+      color: #fff;
+      text-transform: uppercase;
+      margin: 10px 0;
+    }
+
+    .bottom-links .links a {
+      text-decoration: none;
+      color: #a1a1a1;
+      padding: 10px 20px;
+    }
+    a{
+      text-decoration: none;
+      color: black;
+    }
+    .bg{
+      width: 100%;
+      height: 500px;
+      position: absolute;
+      bottom: 0;
+      z-index: -1;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <a href="#" class="logo">ComSciReview</a>
+    
+  </header>
+  <main>
+    <div class="intro">
+      <h1>Hi!</h1>
+      <p>Welcome to Your Ultimate CS Companion for Beginner-Friendly Coding</p>
+     
+    </div>
+    
+    
+    <img src="aaaaaa.jpg" alt="bg" class="bg">
+    <div class="achievements">
+      <a href="events.html">
+      <div class="work">
+        <i class="fas fa-database"></i>
+        <p class="work-heading">Opersyst</a></p>
+      </div>
+
+      
+      <div class="work">
+        <a href="newspage.html">
+        <i class="fas fa-microchip"></i>
+        <p class="work-heading">SoftEng</a></p>
+      </div>
+
+      <div class="work">
+        <a href="pets(2).html">
+        <i class="fas fa-server"></i>
+        <p class="work-heading">Algcomply</a></p>
+
+      </div>
+      <div class="work">
+        <a href="adaptation.html">
+        <i class="fas fa-ethernet"></i>
+        <p class="work-heading">Archiorg</a></p>
+
+      </div>
+      <div class="work">
+        <a href="Tips.html">
+        <i class="fas fa-laptop"></i>
+        <p class="work-heading">Intelsyst</a></p>
+
+      </div>
+      <div class="work">
+        <a href="Tips copy.html">
+        <i class="fas fa-stream"></i>
+        <p class="work-heading">humcomint</a></p>
+
+      </div>
+      <div class="work">
+        <a href="Tips copy 2.html">
+        <i class="fas fa-keyboard"></i>
+        <p class="work-heading">Appdev</a></p>
+  
+      </div>
+    </div>
+    
+  </main>
+  
+</body>
+
+</html>
